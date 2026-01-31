@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#0b6efd">
+  <title>Seite 3 — Test Projekt</title>
+</head>
+<body>
+  <main class="container">
+    <h1>Seite 3</h1>
+    <p>Beste Perks für Überlebende in Dead by Daylight.</p>
+    <p>Dead Hard: Ermöglicht dir, kurzzeitig vor Schaden auszuweichen, indem du einen schnellen Sprint ausführst. Perfekt, um aus brenzligen Situationen während der Verfolgung zu entkommen.</p>
+    <p>Borrowed Time: Gibt dir nach dem Retten eines Mitspielers einen temporären Schutz vor sofortigem Down. Sehr hilfreich gegen Killer, die nach dem Retten direkt wieder angreifen.</p>
+    <p>Sprint Burst: Erhöht deine Bewegungsgeschwindigkeit für kurze Zeit nach dem Starten eines Generators.</p>
+
+    <nav class="center" style="margin-top:1.5rem;">
+      <a href="iwas coden 2.html">Hauptseite</a> • <a href="seite2.html">Seite 2</a> • <a href="seite3.html">Seite 3</a>
+    </nav>
+  </main>
+
+  <script>
+    // Lädt dieselbe Config und wendet Farben/Texte an
+    fetch('site.config.json')
+      .then(r => r.json())
+      .then(cfg => {
+        document.title = (cfg.title ? cfg.title + ' — Seite 3' : document.title);
+        var root = document.documentElement.style;
+        if (cfg.themeColor) root.setProperty('--accent', cfg.themeColor);
+        if (cfg.background) root.setProperty('--bg', cfg.background);
+        if (cfg.textColor) root.setProperty('--text', cfg.textColor);
+        if (cfg.fontFamily) root.setProperty('--font', cfg.fontFamily);
+      })
+      .catch(function(){ });
+  </script>
+</body>
+</html>

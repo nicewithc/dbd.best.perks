@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#0b6efd">
+  <title>Seite 2 — Killer best Perks</title>
+</head>
+<body>
+  <main class="container">
+    <h1>Seite 2</h1>
+    <p>Das sind die besten Perks für Killer in Dead by Daylight.</p>
+    <p>Barbecue & Chili: Sicht auf andere Überlebende nach einem Hook für kurze Zeit</p>
+    <p>Hex: Ruin: Macht Generatoren langsamer, solange der Totem-Hex aktiv ist.</p>
+    <p>Pop Goes the Weasel: Nach dem Haken eines Überlebenden, wird der nächste Generator stark beschädigt.</p>
+
+    <nav class="center" style="margin-top:1.5rem;">
+      <a href="iwas coden 2.html">Hauptseite</a> • <a href="seite2.html">Seite 2</a> • <a href="seite3.html">Seite 3</a>
+    </nav>
+  </main>
+
+  <script>
+    // Lädt dieselbe Config und wendet Farben/Texte an
+    fetch('site.config.json')
+      .then(r => r.json())
+      .then(cfg => {
+        document.title = (cfg.title ? cfg.title + ' — Seite 2' : document.title);
+        var root = document.documentElement.style;
+        if (cfg.themeColor) root.setProperty('--accent', cfg.themeColor);
+        if (cfg.background) root.setProperty('--bg', cfg.background);
+        if (cfg.textColor) root.setProperty('--text', cfg.textColor);
+        if (cfg.fontFamily) root.setProperty('--font', cfg.fontFamily);
+      })
+      .catch(function(){ });
+  </script>
+</body>
+</html>
