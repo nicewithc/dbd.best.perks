@@ -51,4 +51,22 @@
 </body>
 </html>
 
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> JoJo. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<style>
+  .site-footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--accent);
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+
 
