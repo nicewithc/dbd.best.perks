@@ -22,23 +22,4 @@ h1 { color: var(--accent); margin-top: 0; }
 
 p { line-height: 1.6; font-size: 1.125rem; }
 
-/* Utility */
-
-<footer class="site-footer">
-  <p>&copy; <span id="year"></span> Dein Name. Alle Rechte vorbehalten.</p>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-<style>
-  .site-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: var(--accent);
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-  }
 
